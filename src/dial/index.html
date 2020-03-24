@@ -6,6 +6,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script> -->
+  <script src="dial.js"></script>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -50,32 +55,32 @@
   <div class="container-fluid">
 
     <div class="keypad">
-      <input class="num-box" id="phoneNum" type="number" readonly value="123">
+      <input class="num-box" id="phoneNum" type="text" readonly>
     </div>
 
     <div class="keypad">
       <div class="row">
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">1</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">2</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">3</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key(1)">1</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key(2)">2</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key(3)">3</button></div>
       </div>
       <br>
       <div class="row">
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">4</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">5</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">6</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key(4)">4</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key(5)">5</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key(6)">6</button></div>
       </div>
       <br>
       <div class="row">
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">7</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">8</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">9</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key(7)">7</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key(8)">8</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key(9)">9</button></div>
       </div>
       <br>
       <div class="row">
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">*</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">0</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl">#</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key('*')">*</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key(0)">0</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" onclick="press_num_key('#')">#</button></div>
       </div>
     </div>
     <div class="keypad">
@@ -110,14 +115,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 </body>
 
 </html>
