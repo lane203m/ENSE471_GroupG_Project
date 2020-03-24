@@ -6,3 +6,7 @@ function backspace(){
     text = document.getElementById("phoneNum").value
     document.getElementById("phoneNum").value = text.slice(0,-1);
 }
+
+function call_911(){
+    // doing validation...
+}
