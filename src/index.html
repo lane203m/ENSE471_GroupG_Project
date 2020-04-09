@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script> -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <style>
+        .keypad {
+            background-size: auto;
+            text-align: center;
+            padding-top: 15%;
+            vertical-align: middle;
+        }
+
+        .btn-circle.btn-xl {
+            width: 70px;
+            height: 70px;
+            padding: 10px 16px;
+            border-radius: 35px;
+            font-size: 24px;
+            line-height: 1.33;
+        }
+
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            padding: 6px 0px;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.42857;
+        }
+
+        .num-box {
+            text-align: center;
+            width: 70%;
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="keypad" style="padding-top: 55%;">
+            <button type="button" class=" btn btn-success" onclick="jump()">
+                <img src="dial/phone.svg">
+                <label>911</label>
+            </button>
+        </div>
+    </div>
+</body>
+<script>
+    function jump(){
+        window.location.href = "dial/index.html";
+    }
+</script>
+</html>
