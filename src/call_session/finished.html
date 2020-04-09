@@ -6,22 +6,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script> -->
-    <!-- Bootstrap CSS -->
+	<!-- Boostrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="../masterStyleSheet.css">
+    <!--  Our CSS -->
+    <link rel="stylesheet" type="text/css" href="../masterStyleSheet.css">
+    <!--  Add Confetti -->
+    <script src="confetti.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid">
+	<script>
+		//run confetti for duration
+		confetti.start(5000)
+	</script>
+	
+	<!-- This section aims to make the child feel proud -->
+    <div class="container-fluid">	<!-- kept at phone dimension -->
         <div class="keypad" style="padding-top: 55%;">
             <h1>Excellent Work!</h1>
             <p>You called 911!</p>
         </div>
+        
+        <!-- Leave to home -->
         <div class="keypad" style="padding-top: 30%;">
             <button type="button" class="btn btn-dark " onclick="home()">
                 <svg class="bi bi-house-door" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
@@ -37,6 +44,7 @@
 </body>
 <script>
     function home(){
+    	//go to home
         window.location.href = "../home/index.html";
     }
 </script>

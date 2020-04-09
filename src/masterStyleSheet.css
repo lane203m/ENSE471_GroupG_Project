@@ -1,16 +1,18 @@
+/*Master css file.*/
+
+/*keeps within phone dimensions*/
     .container-fluid{
  		width: 300px;
  		max-height: 1000px;
- 		
-
  	}
+/*css for keypad*/
     .keypad {
       background-size: auto;
       text-align: center;
       padding-top: 10%;
       vertical-align: middle;
     }
-
+/*css for large button as a circle*/
     .btn-circle.btn-xl {
       width: 70px;
       height: 70px;
@@ -19,7 +21,7 @@
       font-size: 24px;
       line-height: 1.33;
     }
-
+/*css for button as a circle*/
     .btn-circle {
       width: 30px;
       height: 30px;
@@ -28,24 +30,26 @@
       text-align: center;
       font-size: 12px;
       line-height: 1.42857;
-      -webkit-transition: background-color 2s ease-out;
+      -webkit-transition: background-color 2s ease-out; /*used for color transition*/
   	  -moz-transition: background-color 2s ease-out;
   	  -o-transition: background-color 2s ease-out;
   	  transition: background-color 2s ease-out;
     }
+    
+/*secondary circles*/
     .btn-circle2 {
-
       height: 30px;
       padding: 6px 5px;
       border-radius: 15px;
       text-align: center;
       font-size: 12px;
       line-height: 1.42857;
-      -webkit-transition: background-color 2s ease-out;
+      -webkit-transition: background-color 2s ease-out; /*used for color transition*/
   	  -moz-transition: background-color 2s ease-out;
   	  -o-transition: background-color 2s ease-out;
   	  transition: background-color 2s ease-out;
     }
+/*small buttons */
     .btn-small{
     	width: 20px;
     	height: 20px;
@@ -56,7 +60,7 @@
      	line-height: 1.42857;
 
     }
-
+/* number input box */
     .num-box {
       text-align: center;
       width: 70%;
@@ -64,20 +68,25 @@
       border-width: 0 0 2px;
       border-color: black;
     }
+    
+/* input box with error */
     .error_box{
 		border-color: #CC5500;
 		border-width: 2px 2px 2px 2px;
 		border-style: dashed;
 	}
+/*remove error*/
 	.no_error{
 		border-color: black;
 		border-width: 0px 0px 2px 0px;
 		border-style: solid;
 	}
+/*shake input box on error*/
     .shake {
  		animation: shake 0.3s; 
  		animation-iteration-count: infinite; 
  	}
+/* How to animate for shake*/
     @keyframes shake {
     	0% { transform: translate(10px, 0px) rotate(0deg); }
  		20% { transform: translate(-10px, 0px) rotate(1deg); }
@@ -86,32 +95,32 @@
  		80% { transform: translate(-10px, 0px) rotate(1deg); }
  		100% { transform: translate(10px, 0px) rotate(-1deg); }
  	}
-
+/*buttons are light blue*/
 	.light_blue{
 		background-color: #33ccff;
 		border-color: #33ccff;
 	}
-
-
+/*buttons are gray*/
 	.gray{
 		background-color: light gray;
 		
 	}
+/*help button*/
 	.help{
 	    text-align: center;
 	    margin-top: 5%;
 	}
-
 	a{
 		font-size: 12px;
 	}
 
-
+/*css to make buttons bounce*/
 	.btn-bounce{
 		-webkit-animation: bounce .2s infinite alternate;
   		-moz-animation: bounce .2s infinite alternate;
   		animation: bounce .2s infinite alternate;
 	}
+/*how to bounce with animations/transform */
 	@-webkit-keyframes bounce {
   	to { -webkit-transform: scale(1.2); }
 	}
@@ -122,6 +131,7 @@
   	to { transform: scale(1.2); }
 	}
 	
+/*modal css*/
 	.modal {
   		display: none; /* Hidden by default */
   		position: fixed; /* Stay in place */
@@ -148,12 +158,13 @@
     	animation-name: zoom;
     	animation-duration: 0.6s;
 	}	
+/* zoom modal*/
 	.modal-out{
 	
 	animation-duration: 0.6s;
     animation-name: zoom-out;
 	}
-	
+/*animations for zoom modal*/	
 	
 	@-webkit-keyframes zoom {
     from {-webkit-transform:scale(1)}

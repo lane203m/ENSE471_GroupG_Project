@@ -16,8 +16,8 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-		
+    <div class="container-fluid">	<!-- kept at phone dimensions -->
+		<!-- Our modal -->
 		<div id="myModal" class="modal">
  		<!-- Modal content -->
   			<div class="modal-content modal-zoom" id="modal_content">
@@ -25,22 +25,24 @@
  			</div>
 		</div>
 		
-		
+		<!-- help button -->
 		<div class="help">
   			<button type="button" class="btn btn-primary  btn-circle2" id="help-btn" onclick="runHelp()">What to expect</button>
   		</div>
 		
-		
+		<!-- call contact -->
         <div class="keypad">
             <img style="width:40%" src="account.svg">
             <br>
             <h>911</h>
         </div>
+        <!-- duration -->
         <div class="keypad">
             <h id="minute">00</h>
             <h>:</h>
             <h id="second">00</h>
         </div>
+        <!-- hangup -->
         <div class="keypad" style="padding-top: 55%;">
             <button type="button" class="align-text-bottom btn btn-danger btn-circle btn-xl" onclick="call_done()">
                 <img src="../dial/phone.svg">
