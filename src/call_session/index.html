@@ -66,7 +66,7 @@
             <h id="second">00</h>
         </div>
         <div class="keypad" style="padding-top: 55%;">
-            <button type="button" class="align-text-bottom btn btn-danger btn-circle btn-xl" onclick="call_911()">
+            <button type="button" class="align-text-bottom btn btn-danger btn-circle btn-xl" onclick="home()">
                 <img src="../dial/phone.svg">
             </button>
         </div>
@@ -76,5 +76,8 @@
 
 <script>
     setInterval(timing, 1000);
+    function home(){
+        window.location.href = "../congrat.html";
+    }
 </script>
 </html>
