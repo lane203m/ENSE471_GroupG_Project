@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script> -->
+  <script src="dial.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <style>
+    .keypad {
+      background-size: auto;
+      text-align: center;
+      padding-top: 15%;
+      vertical-align: middle;
+    }
+
+    .btn-circle.btn-xl {
+      width: 70px;
+      height: 70px;
+      padding: 10px 16px;
+      border-radius: 35px;
+      font-size: 24px;
+      line-height: 1.33;
+    }
+
+    .btn-circle {
+      width: 30px;
+      height: 30px;
+      padding: 6px 0px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.42857;
+      -webkit-transition: background-color 2s ease-out;
+  	  -moz-transition: background-color 2s ease-out;
+  	  -o-transition: background-color 2s ease-out;
+  	  transition: background-color 2s ease-out;
+    }
+
+    .num-box {
+      text-align: center;
+      width: 70%;
+      outline: 0;
+      border-width: 0 0 2px;
+      border-color: black;
+    }
+    .shake {
+ 		animation: shake 0.3s; 
+ 		animation-iteration-count: infinite; 
+ 	}
+    @keyframes shake {
+    	0% { transform: translate(10px, 0px) rotate(0deg); }
+ 		20% { transform: translate(-10px, 0px) rotate(1deg); }
+ 		40% { transform: translate(10px, 0px) rotate(1deg); }
+ 		60% { transform: translate(-10px, 0px) rotate(0deg); }
+ 		80% { transform: translate(-10px, 0px) rotate(1deg); }
+ 		100% { transform: translate(10px, 0px) rotate(-1deg); }
+ 	}
+ 	.container-fluid{
+ 		width: 300px;
+ 		max-height: 1000px;
+
+ 	}
+ 	.modal {
+  		display: none; /* Hidden by default */
+  		position: fixed; /* Stay in place */
+  		z-index: 1; /* Sit on top */
+ 		padding-top: 125px; /* Location of the box */
+  		left: 0;
+  		top: 0;
+  		width: 100%; /* Full width */
+  		height: 100%; /* Full height */
+  		overflow: auto; /* Enable scroll if needed */
+  		background-color: rgb(0,0,0); /* Fallback color */
+  		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+	.light_blue{
+		background-color: #33ccff;
+		border-color: #33ccff;
+	}
+	.error_box{
+		border-color: #CC5500;
+		border-width: 2px 2px 2px 2px;
+		border-style: dashed;
+	}
+	.no_error{
+		border-color: black;
+		border-width: 0px 0px 2px 0px;
+		border-style: solid;
+	}
+	.gray{
+		background-color: light gray;
+		
+	}
+
+/* Modal Content */
+	.modal-content {
+		text-align: center;
+  		background-color: #fefefe;
+  		margin: auto;
+  		padding: 20px;
+  		border: 1px solid #888;
+  		width: 295px;
+  		-webkit-animation-name: zoom;
+    	-webkit-animation-duration: 0.6s;
+    	animation-name: zoom;
+    	animation-duration: 0.6s;
+	}
+
+	.modal-out{
+	
+	animation-duration: 0.6s;
+    animation-name: zoom-out;
+	}
+	.btn-bounce{
+		-webkit-animation: bounce .2s infinite alternate;
+  		-moz-animation: bounce .2s infinite alternate;
+  		animation: bounce .2s infinite alternate;
+	}
+	@-webkit-keyframes bounce {
+  	to { -webkit-transform: scale(1.2); }
+	}
+	@-moz-keyframes bounce {
+  	to { -moz-transform: scale(1.2); }
+	}
+	@keyframes bounce {
+  	to { transform: scale(1.2); }
+	}
+	@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(1)}
+    to {-webkit-transform:scale(2)}
+	}
+	@keyframes zoom {
+    from {transform:scale(0.4)}
+    to {transform:scale(1)}
+	}
+	@keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+	}
+ 	
+  </style>
+</head>
+
+<body>
+	
+
+  <div class="container-fluid">
+  
+  
+  
+  
+	<div id="myModal" class="modal">
+
+ 		<!-- Modal content -->
+  		<div class="modal-content modal-zoom">
+    		<p id="advice">Some text in the Modal..</p>
+ 		</div>
+
+	</div>
+    <div class="keypad">
+      <input class="num-box" id="phoneNum" type="text" readonly>
+    </div>
+
+    <div class="keypad">
+      <div class="row">
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="1"
+            onclick="press_num_key(1)">1</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="2"
+            onclick="press_num_key(2)">2</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="3"
+            onclick="press_num_key(3)">3</button></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="4"
+            onclick="press_num_key(4)">4</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="5"
+            onclick="press_num_key(5)">5</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="6"
+            onclick="press_num_key(6)">6</button></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="7"
+            onclick="press_num_key(7)">7</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="8"
+            onclick="press_num_key(8)">8</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="9"
+            onclick="press_num_key(9)">9</button></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="*"
+            onclick="press_num_key('*')">*</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="0"
+            onclick="press_num_key(0)">0</button></div>
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="#"
+            onclick="press_num_key('#')">#</button></div>
+      </div>
+    </div>
+    <div class="keypad">
+      <div class="row align-items-center">
+        <div class="col">
+          <button type="button" class="btn btn-dark ">
+            <svg class="bi bi-house-door" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M7.646 1.146a.5.5 0 01.708 0l6 6a.5.5 0 01.146.354v7a.5.5 0 01-.5.5H9.5a.5.5 0 01-.5-.5v-4H7v4a.5.5 0 01-.5.5H2a.5.5 0 01-.5-.5v-7a.5.5 0 01.146-.354l6-6zM2.5 7.707V14H6v-4a.5.5 0 01.5-.5h3a.5.5 0 01.5.5v4h3.5V7.707L8 2.207l-5.5 5.5z"
+                clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M13 2.5V6l-2-2V2.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5z" clip-rule="evenodd" />
+            </svg>
+          </button></div>
+        <div class="col">
+          <button type="button" class="btn btn-success btn-circle btn-xl" onclick="call_911()">
+            <img src="phone.svg">
+          </button></div>
+        <div class="col">
+          <button type="button" class="btn btn-dark " onclick="backspace()">
+            <svg class="bi bi-backspace" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd"
+                d="M6.603 2h7.08a1 1 0 011 1v10a1 1 0 01-1 1h-7.08a1 1 0 01-.76-.35L1 8l4.844-5.65A1 1 0 016.603 2zm7.08-1a2 2 0 012 2v10a2 2 0 01-2 2h-7.08a2 2 0 01-1.519-.698L.241 8.65a1 1 0 010-1.302L5.084 1.7A2 2 0 016.603 1h7.08z"
+                clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M5.83 5.146a.5.5 0 000 .708l5 5a.5.5 0 00.707-.708l-5-5a.5.5 0 00-.708 0z"
+                clip-rule="evenodd" />
+              <path fill-rule="evenodd" d="M11.537 5.146a.5.5 0 010 .708l-5 5a.5.5 0 01-.708-.708l5-5a.5.5 0 01.707 0z"
+                clip-rule="evenodd" />
+            </svg>
+          </button></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
