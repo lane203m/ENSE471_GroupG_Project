@@ -1,0 +1,169 @@
+    .container-fluid{
+ 		width: 300px;
+ 		max-height: 1000px;
+ 		
+
+ 	}
+    .keypad {
+      background-size: auto;
+      text-align: center;
+      padding-top: 10%;
+      vertical-align: middle;
+    }
+
+    .btn-circle.btn-xl {
+      width: 70px;
+      height: 70px;
+      padding: 10px 16px;
+      border-radius: 35px;
+      font-size: 24px;
+      line-height: 1.33;
+    }
+
+    .btn-circle {
+      width: 30px;
+      height: 30px;
+      padding: 6px 0px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.42857;
+      -webkit-transition: background-color 2s ease-out;
+  	  -moz-transition: background-color 2s ease-out;
+  	  -o-transition: background-color 2s ease-out;
+  	  transition: background-color 2s ease-out;
+    }
+    .btn-circle2 {
+
+      height: 30px;
+      padding: 6px 5px;
+      border-radius: 15px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 1.42857;
+      -webkit-transition: background-color 2s ease-out;
+  	  -moz-transition: background-color 2s ease-out;
+  	  -o-transition: background-color 2s ease-out;
+  	  transition: background-color 2s ease-out;
+    }
+    .btn-small{
+    	width: 20px;
+    	height: 20px;
+    	padding: 0px 0px;
+     	border-radius: 15px;
+     	text-align: center;
+      	font-size: 12px;
+     	line-height: 1.42857;
+
+    }
+
+    .num-box {
+      text-align: center;
+      width: 70%;
+      outline: 0;
+      border-width: 0 0 2px;
+      border-color: black;
+    }
+    .error_box{
+		border-color: #CC5500;
+		border-width: 2px 2px 2px 2px;
+		border-style: dashed;
+	}
+	.no_error{
+		border-color: black;
+		border-width: 0px 0px 2px 0px;
+		border-style: solid;
+	}
+    .shake {
+ 		animation: shake 0.3s; 
+ 		animation-iteration-count: infinite; 
+ 	}
+    @keyframes shake {
+    	0% { transform: translate(10px, 0px) rotate(0deg); }
+ 		20% { transform: translate(-10px, 0px) rotate(1deg); }
+ 		40% { transform: translate(10px, 0px) rotate(1deg); }
+ 		60% { transform: translate(-10px, 0px) rotate(0deg); }
+ 		80% { transform: translate(-10px, 0px) rotate(1deg); }
+ 		100% { transform: translate(10px, 0px) rotate(-1deg); }
+ 	}
+
+	.light_blue{
+		background-color: #33ccff;
+		border-color: #33ccff;
+	}
+
+
+	.gray{
+		background-color: light gray;
+		
+	}
+	.help{
+	    text-align: center;
+	    margin-top: 5%;
+	}
+
+	a{
+		font-size: 12px;
+	}
+
+
+	.btn-bounce{
+		-webkit-animation: bounce .2s infinite alternate;
+  		-moz-animation: bounce .2s infinite alternate;
+  		animation: bounce .2s infinite alternate;
+	}
+	@-webkit-keyframes bounce {
+  	to { -webkit-transform: scale(1.2); }
+	}
+	@-moz-keyframes bounce {
+  	to { -moz-transform: scale(1.2); }
+	}
+	@keyframes bounce {
+  	to { transform: scale(1.2); }
+	}
+	
+	.modal {
+  		display: none; /* Hidden by default */
+  		position: fixed; /* Stay in place */
+  		z-index: 1; /* Sit on top */
+ 		padding-top: 125px; /* Location of the box */
+  		left: 0;
+  		top: 0;
+  		width: 100%; /* Full width */
+  		height: 100%; /* Full height */
+  		overflow: scroll; /* Enable scroll if needed */
+  		background-color: rgb(0,0,0); /* Fallback color */
+  		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+/* Modal Content */
+	.modal-content {
+		text-align: center;
+  		background-color: #fefefe;
+  		margin: auto;
+  		padding: 5px;
+  		border: 1px solid #888;
+  		width: 295px;
+  		-webkit-animation-name: zoom;
+    	-webkit-animation-duration: 0.6s;
+    	animation-name: zoom;
+    	animation-duration: 0.6s;
+	}	
+	.modal-out{
+	
+	animation-duration: 0.6s;
+    animation-name: zoom-out;
+	}
+	
+	
+	@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(1)}
+    to {-webkit-transform:scale(2)}
+	}
+	@keyframes zoom {
+    from {transform:scale(0.4)}
+    to {transform:scale(1)}
+	}
+	@keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+	}

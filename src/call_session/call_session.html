@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../masterStyleSheet.css">
+    
+    <script src="call_session.js"></script>
+
+    
+</head>
+
+<body>
+    <div class="container-fluid">
+		
+		<div id="myModal" class="modal">
+ 		<!-- Modal content -->
+  			<div class="modal-content modal-zoom" id="modal_content">
+    			<p id="advice">Some text in the Modal..</p>
+ 			</div>
+		</div>
+		
+		
+		<div class="help">
+  			<button type="button" class="btn btn-primary  btn-circle2" id="help-btn" onclick="runHelp()">What to expect</button>
+  		</div>
+		
+		
+        <div class="keypad">
+            <img style="width:40%" src="account.svg">
+            <br>
+            <h>911</h>
+        </div>
+        <div class="keypad">
+            <h id="minute">00</h>
+            <h>:</h>
+            <h id="second">00</h>
+        </div>
+        <div class="keypad" style="padding-top: 55%;">
+            <button type="button" class="align-text-bottom btn btn-danger btn-circle btn-xl" onclick="call_done()">
+                <img src="../dial/phone.svg">
+            </button>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    setInterval(timing, 1000);
+</script>
+</html>

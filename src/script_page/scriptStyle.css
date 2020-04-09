@@ -1,0 +1,20 @@
+  	div{
+  		font-size:8
+  	}
+	img{
+		width: 45px;
+		height: 45px;
+	}
+	.child{
+		text-align:right;
+		color:blue;
+	}
+	.operator{
+		text-align:left;
+		color: red;
+	}
+	.container-fluid{
+ 		width: 100%;
+ 		
+
+ 	}
