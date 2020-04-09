@@ -39,6 +39,10 @@
       text-align: center;
       font-size: 12px;
       line-height: 1.42857;
+      -webkit-transition: background-color 2s ease-out;
+  	  -moz-transition: background-color 2s ease-out;
+  	  -o-transition: background-color 2s ease-out;
+  	  transition: background-color 2s ease-out;
     }
 
     .num-box {
@@ -48,50 +52,158 @@
       border-width: 0 0 2px;
       border-color: black;
     }
+    .shake {
+ 		animation: shake 0.3s; 
+ 		animation-iteration-count: infinite; 
+ 	}
+    @keyframes shake {
+    	0% { transform: translate(10px, 0px) rotate(0deg); }
+ 		20% { transform: translate(-10px, 0px) rotate(1deg); }
+ 		40% { transform: translate(10px, 0px) rotate(1deg); }
+ 		60% { transform: translate(-10px, 0px) rotate(0deg); }
+ 		80% { transform: translate(-10px, 0px) rotate(1deg); }
+ 		100% { transform: translate(10px, 0px) rotate(-1deg); }
+ 	}
+ 	.container-fluid{
+ 		width: 300px;
+ 		max-height: 1000px;
+
+ 	}
+ 	.modal {
+  		display: none; /* Hidden by default */
+  		position: fixed; /* Stay in place */
+  		z-index: 1; /* Sit on top */
+ 		padding-top: 125px; /* Location of the box */
+  		left: 0;
+  		top: 0;
+  		width: 100%; /* Full width */
+  		height: 100%; /* Full height */
+  		overflow: auto; /* Enable scroll if needed */
+  		background-color: rgb(0,0,0); /* Fallback color */
+  		background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	}
+	.light_blue{
+		background-color: #33ccff;
+		border-color: #33ccff;
+	}
+	.error_box{
+		border-color: #CC5500;
+		border-width: 2px 2px 2px 2px;
+		border-style: dashed;
+	}
+	.no_error{
+		border-color: black;
+		border-width: 0px 0px 2px 0px;
+		border-style: solid;
+	}
+	.gray{
+		background-color: light gray;
+		
+	}
+
+/* Modal Content */
+	.modal-content {
+		text-align: center;
+  		background-color: #fefefe;
+  		margin: auto;
+  		padding: 20px;
+  		border: 1px solid #888;
+  		width: 295px;
+  		-webkit-animation-name: zoom;
+    	-webkit-animation-duration: 0.6s;
+    	animation-name: zoom;
+    	animation-duration: 0.6s;
+	}
+
+	.modal-out{
+	
+	animation-duration: 0.6s;
+    animation-name: zoom-out;
+	}
+	.btn-bounce{
+		-webkit-animation: bounce .2s infinite alternate;
+  		-moz-animation: bounce .2s infinite alternate;
+  		animation: bounce .2s infinite alternate;
+	}
+	@-webkit-keyframes bounce {
+  	to { -webkit-transform: scale(1.2); }
+	}
+	@-moz-keyframes bounce {
+  	to { -moz-transform: scale(1.2); }
+	}
+	@keyframes bounce {
+  	to { transform: scale(1.2); }
+	}
+	@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(1)}
+    to {-webkit-transform:scale(2)}
+	}
+	@keyframes zoom {
+    from {transform:scale(0.4)}
+    to {transform:scale(1)}
+	}
+	@keyframes zoom-out {
+    from {transform:scale(1)}
+    to {transform:scale(0)}
+	}
+ 	
   </style>
 </head>
 
 <body>
-  <div class="container-fluid">
+	
 
+  <div class="container-fluid">
+  
+  
+  
+  
+	<div id="myModal" class="modal">
+
+ 		<!-- Modal content -->
+  		<div class="modal-content modal-zoom">
+    		<p id="advice">Some text in the Modal..</p>
+ 		</div>
+
+	</div>
     <div class="keypad">
       <input class="num-box" id="phoneNum" type="text" readonly>
     </div>
 
     <div class="keypad">
       <div class="row">
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="1"
             onclick="press_num_key(1)">1</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="2"
             onclick="press_num_key(2)">2</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="3"
             onclick="press_num_key(3)">3</button></div>
       </div>
       <br>
       <div class="row">
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="4"
             onclick="press_num_key(4)">4</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="5"
             onclick="press_num_key(5)">5</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="6"
             onclick="press_num_key(6)">6</button></div>
       </div>
       <br>
       <div class="row">
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="7"
             onclick="press_num_key(7)">7</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="8"
             onclick="press_num_key(8)">8</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="9"
             onclick="press_num_key(9)">9</button></div>
       </div>
       <br>
       <div class="row">
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="*"
             onclick="press_num_key('*')">*</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="0"
             onclick="press_num_key(0)">0</button></div>
-        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl"
+        <div class="col"><button type="button" class="btn btn-primary btn-circle btn-xl" id="#"
             onclick="press_num_key('#')">#</button></div>
       </div>
     </div>
