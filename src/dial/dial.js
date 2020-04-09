@@ -74,7 +74,7 @@ function call_911(){
 		}
 	}
 	else{
-		
+		window.location.href = "../call_session/index.html";
 	}
 	
 }
