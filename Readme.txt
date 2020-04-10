@@ -1,5 +1,16 @@
 This tool is entirely made with HTML, JavaScript and CSS. It also uses Boostrap's CSS.
 
+Note, 
+
+This has been sucessfully tested for chrome and samsung internet browser on smart phones.
+
+This tool also works on Chrome, Edge, and Firefox via desktop/personal computer. 
+
+This tool does not work for mobile devices using safari or firefox 
+
+Other mobile browsers may or may not be compatible.
+
+
 While you can install this to any device(s), the easiest way for a large deployment is to 
 host the webpage on a domain or server - which grants greater accesibility. 
 Really, we want anything easily accecible by your staff from the web.
