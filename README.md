@@ -26,17 +26,6 @@ This tool is entirely made with HTML, JavaScript and CSS. It also uses Bootstrap
 
 While you can install this to any device(s), the easiest way for a large deployment is to host the webpage on a domain or server - which grants greater accesibility. Really, we want anything easily accessible by your staff from the web.
 
-### Demo
-
-For example, everyone can demo the tool at
-[Here](http://hzyone.com/home/)
-Or
-[Here](http://www2.cs.uregina.ca/~lane203m/call911_471/home/index.html)
-
-The above works without installing anything.
-
-So, consider hosting it to avoid distributing multiple copies.
-
 ### Installation
 
 If you simply wish to install this to a device, like a personal computer/phone - do the following:
